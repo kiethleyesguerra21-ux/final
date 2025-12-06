@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colors</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: url('color.jpg') no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+/* ===== SCROLLABLE SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  z-index: 10;
+  overflow-y: auto; /* enables scrolling if content exceeds height */
+}
+
+/* Optional scrollbar styling for Chrome, Edge, Safari */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== MAIN CONTENT ===== */
+.content {
+  margin-right: 220px; /* space for sidebar */
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+/* Color Boxes Layout */
+.color-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.color-box {
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.2s; /* smooth grow on click */
+}
+
+/* Click effect */
+.color-box.active {
+  transform: scale(1.1); /* grows 10% */
+}
+
+/* Colors */
+.red { background: #e74c3c; }
+.blue { background: #3498db; }
+.green { background: #2ecc71; }
+.yellow { background: #f1c40f; color: #000; }
+.purple { background: #9b59b6; }
+.orange { background: #e67e22; }
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="colors.html">Colors</a>
+  <a href="shape.html">Shape</a>
+  <a href="animals.html">Animals</a>
+  <a href="alphabet.html">Alphabet</a>
+  <a href="numbers.html">Numbers</a>
+  <a href="story.html">Story</a>
+  <a href="multiplication table.html">Multiplication table</a>
+  <a href="heros.html">Philippine national heroes</a>
+  <a href="vege.html">fruits/vegetables</a>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+  <h1>COLORS</h1>
+
+  <div class="color-container">
+    <div class="color-box red" onclick="toggleColor(this)">Red</div>
+    <div class="color-box blue" onclick="toggleColor(this)">Blue</div>
+    <div class="color-box green" onclick="toggleColor(this)">Green</div>
+    <div class="color-box yellow" onclick="toggleColor(this)">Yellow</div>
+    <div class="color-box purple" onclick="toggleColor(this)">Purple</div>
+    <div class="color-box orange" onclick="toggleColor(this)">Orange</div>
+  </div>
+</div>
+
+<script>
+function toggleColor(box) {
+  // Remove active from all color boxes
+  document.querySelectorAll('.color-box').forEach(b => b.classList.remove('active'));
+  // Activate clicked box
+  box.classList.add('active');
+}
+</script>
+
+</body>
+</html>

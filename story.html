@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('story.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-right: 200px;
+      padding: 20px;
+    }
+
+    /* ===== RIGHT SIDEBAR MENU ===== */
+    .sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  z-index: 10;
+  overflow-y: auto; /* enables scrolling if content exceeds height */
+}
+
+/* Optional scrollbar styling for Chrome, Edge, Safari */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .content {
+      margin-right: 200px; /* space for right sidebar */
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 40px;
+    }
+
+    .story-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .story-box {
+      background: rgb(13, 245, 36);
+      padding: 20px;
+      width: 220px;
+      border-radius: 15px;
+      transition: transform 0.2s, background 0.2s;
+      cursor: pointer;
+      text-align: center;
+      color: white;
+    }
+
+    .story-box:hover {
+      transform: scale(1.05);
+      background: rgba(2, 70, 28, 0.815);
+    }
+
+    .story-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .story-content {
+      display: none;
+      margin-top: 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== RIGHT SIDEBAR MENU ===== -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="colors.html">Colors</a>
+  <a href="shape.html">Shape</a>
+  <a href="animals.html">Animals</a>
+  <a href="alphabet.html">Alphabet</a>
+  <a href="numbers.html">Numbers</a>
+  <a href="story.html">Story</a>
+  <a href="multiplication table.html">Multiplication table</a>
+  <a href="heros.html">Philippine national heroes</a>
+  <a href="vege.html">fruits/vegetables</a>
+    
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="content">
+
+  <h1>STORIES FOR KIDS</h1>
+
+  <div class="story-list">
+    <div class="story-box">
+      <div class="story-title">🐶 The Brave Little Puppy</div>
+      <div class="story-content">
+        Max, the little puppy, helped a trapped bird and realized he could do brave things, making a new friend.
+      </div>
+    </div>
+
+    <div class="story-box">
+      <div class="story-title">🐱 The Lost Kitten</div>
+      <div class="story-content">
+        A tiny kitten wandered away from home. With help from friends, it found its way back safely, learning the value of teamwork.
+      </div>
+    </div>
+
+    <div class="story-box">
+      <div class="story-title">🦊 The Clever Fox</div>
+      <div class="story-content">
+        A clever fox used his wit to outsmart a sneaky hunter, showing that brains can be stronger than brawn.
+      </div>
+    </div>
+
+    <div class="story-box">
+      <div class="story-title">🌟 The Star Who Couldn't Shine</div>
+      <div class="story-content">
+        A small star felt useless, but when it finally helped a lost traveler, it realized everyone has a unique light.
+      </div>
+    </div>
+
+    <div class="story-box">
+      <div class="story-title">🚀 Tommy Goes to Space</div>
+      <div class="story-content">
+        Tommy built a rocket in his backyard and went on an amazing space adventure, learning about planets and stars.
+      </div>
+    </div>
+
+    <div class="story-box">
+      <div class="story-title">🐢 The Slow and Happy Turtle</div>
+      <div class="story-content">
+        A turtle raced a hare and showed that being patient and steady can be better than rushing through life.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const boxes = document.querySelectorAll('.story-box');
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      const content = box.querySelector('.story-content');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

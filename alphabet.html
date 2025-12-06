@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('alpha.jpg'); /* your background image */
+      background-size: cover;
+      background-repeat: repeat; /* allows movement */
+      background-position: 0 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-right: 200px;
+      padding: 20px;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 180px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: white;
+      background: rgb(77, 92, 77);
+      padding: 15px;
+      margin: 0 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .content {
+      margin-right: 200px; /* space for right sidebar */
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 40px;
+      color: white;
+      text-shadow: 1px 1px 5px #000; /* optional for readability */
+    }
+
+    .alphabet-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .letter-box {
+      background: rgb(125, 189, 8);
+      padding: 25px;
+      font-size: 32px;
+      border-radius: 15px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .letter-box:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== RIGHT SIDEBAR MENU ===== -->
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="colors.html">Colors</a>
+    <a href="shape.html">Shape</a>
+    <a href="animals.html">Animals</a>
+    <a href="alphabet.html">Alphabet</a>
+    <a href="numbers.html">Numbers</a>
+    <a href="story.html">Story</a>
+    <a href="multiplication table.html">Multiplication table</a>
+    <a href="heros.html">Philippine national heroes</a>
+    <a href="vege.html">fruits/vegetables</a>
+  
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+
+    <h1>THE ALPHABET</h1>
+
+    <div class="alphabet-container">
+      <div class="letter-box">Aa</div>
+      <div class="letter-box">Bb</div>
+      <div class="letter-box">Cc</div>
+      <div class="letter-box">Dd</div>
+      <div class="letter-box">Ee</div>
+      <div class="letter-box">Ff</div>
+      <div class="letter-box">Gg</div>
+      <div class="letter-box">Hh</div>
+      <div class="letter-box">Ii</div>
+      <div class="letter-box">Jj</div>
+      <div class="letter-box">Kk</div>
+      <div class="letter-box">Ll</div>
+      <div class="letter-box">Mm</div>
+      <div class="letter-box">Nn</div>
+      <div class="letter-box">Oo</div>
+      <div class="letter-box">Pp</div>
+      <div class="letter-box">Qq</div>
+      <div class="letter-box">Rr</div>
+      <div class="letter-box">Ss</div>
+      <div class="letter-box">Tt</div>
+      <div class="letter-box">Uu</div>
+      <div class="letter-box">Vv</div>
+      <div class="letter-box">Ww</div>
+      <div class="letter-box">Xx</div>
+      <div class="letter-box">Yy</div>
+      <div class="letter-box">Zz</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

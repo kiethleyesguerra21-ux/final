@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers 1-100</title>
+
+  <style>
+     body {
+    font-family: Arial, sans-serif;
+    background-image: url('num.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+    /* ===== RIGHT SIDEBAR MENU ===== */
+    .sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  z-index: 10;
+  overflow-y: auto; /* enables scrolling if content exceeds height */
+}
+
+/* Optional scrollbar styling for Chrome, Edge, Safari */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+    /* ===== MAIN CONTENT ===== */
+    .content {
+      margin-right: 200px; /* space for right sidebar */
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 40px;
+    }
+
+    .numbers-container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 15px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .number-box {
+      background: rgb(143, 224, 37);
+      padding: 18px;
+      font-size: 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .number-box:hover {
+      transform: scale(1.15);
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ===== RIGHT SIDEBAR MENU ===== -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="colors.html">Colors</a>
+  <a href="shape.html">Shape</a>
+  <a href="animals.html">Animals</a>
+  <a href="alphabet.html">Alphabet</a>
+  <a href="numbers.html">Numbers</a>
+  <a href="story.html">Story</a>
+  <a href="multiplication table.html">Multiplication table</a>
+  <a href="heros.html">Philippine national heroes</a>
+  <a href="vege.html">fruits/vegetables</a>
+   
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="content">
+
+  <h1>NUMBERS 1 - 100</h1>
+
+  <div class="numbers-container">
+    <script>
+      for (let i = 1; i <= 100; i++) {
+        document.write(`<div class="number-box">${i}</div>`);
+      }
+    </script>
+  </div>
+
+</div>
+
+</body>
+</html>

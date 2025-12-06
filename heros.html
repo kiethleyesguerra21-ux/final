@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philippine National Heroes</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 180px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 10;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  .content {
+    margin-right: 200px; /* space for sidebar */
+    padding: 20px 30px;
+    width: calc(100% - 200px);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .hero-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero img {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    flex-shrink: 0;
+  }
+
+  .hero-info {
+    flex: 1;
+  }
+
+  .hero-info h2 {
+    margin: 0 0 8px 0;
+  }
+
+  .hero-info p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin-right: 0;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 10px 0;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    .sidebar a {
+      margin: 0 5px;
+      padding: 10px 12px;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="colors.html">Colors</a>
+  <a href="shape.html">Shape</a>
+  <a href="animals.html">Animals</a>
+  <a href="alphabet.html">Alphabet</a>
+  <a href="numbers.html">Numbers</a>
+  <a href="story.html">Story</a>
+  <a href="multiplication_table.html">Multiplication Table</a>
+  <a href="heros.html">Philippine National Heroes</a>
+  <a href="vege.html">Fruits/Vegetables</a>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="content">
+  <h1>Philippine National Heroes</h1>
+  <div class="hero-list">
+
+    <div class="hero">
+      <img src="rizal.jpg" alt="José Rizal" />
+      <div class="hero-info">
+        <h2>José Rizal</h2>
+        <p>National hero of the Philippines known for his writings that inspired the Philippine revolution against Spanish colonization.</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img src="boni.jpg" alt="Andrés Bonifacio" />
+      <div class="hero-info">
+        <h2>Andrés Bonifacio</h2>
+        <p>Founder of the Katipunan and a leader of the Philippine Revolution.</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img src="emil.jpg" alt="Emilio Aguinaldo" />
+      <div class="hero-info">
+        <h2>Emilio Aguinaldo</h2>
+        <p>First President of the Philippines and leader in the Philippine Revolution.</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img src="apo.jpg" alt="Apolinario Mabini" />
+      <div class="hero-info">
+        <h2>Apolinario Mabini</h2>
+        <p>Known as the "Brains of the Revolution," Mabini was a key adviser to Emilio Aguinaldo.</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img src="gab.jpg" alt="Gabriela Silang" />
+      <div class="hero-info">
+        <h2>Gabriela Silang</h2>
+        <p>Filipina revolutionary leader who fought against Spanish colonizers after the death of her husband.</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img src="marcelo.jpg" alt="Marcelo H. del Pilar" />
+      <div class="hero-info">
+        <h2>Marcelo H. del Pilar</h2>
+        <p>Journalist, lawyer, and reformist leader advocating for Philippine independence from Spain.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
